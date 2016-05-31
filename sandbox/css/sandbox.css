@@ -17,6 +17,9 @@ body {
     position: absolute; 
 }
 
+h1{font-size: 30px;}
+
+
 svg { 
     fill: #fff; 
 }
@@ -38,8 +41,8 @@ svg {
   z-index: 10;
 }
 
-.fixed { height:100%; overflow-y:scroll; background:orange; }
-.scrollit { height:100%; background:lightgray; }
+.fixed { height:100%; overflow-y:scroll;}
+.scrollit { height:100%;}
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
@@ -111,6 +114,12 @@ svg {
     font-size: 4.5em;
     font-weight: 700;
 }
+
+
+
+
+
+
 
 /* Custom Button Styles */
 
