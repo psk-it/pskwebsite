@@ -59,6 +59,16 @@ H2O Open Tour 2016
     <script src="js/modernizr.min.js"></script>
     <!-- Subtle Loading bar -->
     <script src="js/plugins/pace.js"></script>
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
 </head>
 
 <body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
@@ -75,29 +85,7 @@ H2O Open Tour 2016
     <div class="preloader"></div>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top reveal-menu js-reveal-menu reveal-menu-hidden">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><object data="img/ttt-transparent.svg" height="40px" style="vertical-align:middle;" type="image/svg+xml" ></object> Phi Sigma Kappa</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#rush">Rush</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#venue">Location</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
+    <navbar>Loading...</navbar>
     <!-- // End Fixed navbar -->
 
     <header id="top" class="header header_top-bg header-wrap">
