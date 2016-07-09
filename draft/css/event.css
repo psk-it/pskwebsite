@@ -382,6 +382,11 @@ p,
         margin: 80px auto;
     }
 }
+
+
+
+
+
 /* 
    Collapsible Panels
    ------------------ */
@@ -1106,33 +1111,35 @@ p,
     margin: 0 auto;
 }
 /* ================================================
-   Speakers
+   Brothers
    ================================================ */
 
-.speaker-info {
+.brother-info {
     display: inline-block;
     text-align: center;
     width: 200px;
     margin-bottom: 20px;
 }
 
-.speaker-info img {
+.brother-info img {
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
 }
 
-.speaker-info p {
+.brother-info p {
     font-weight: 600;
     font-size: 18px;
     margin: 15px 0 0;
     line-height: 1;
 }
 
-.speaker-info span {
+.brother-info span {
     font-size: 13px;
 }
 
-.speaker-slider .slick-prev,
-.speaker-slider .slick-next {
+.brother-slider .slick-prev,
+.brother-slider .slick-next {
     top: 40%;
 }
 
