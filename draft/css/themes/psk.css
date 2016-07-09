@@ -34,8 +34,24 @@ body,
 }
 /*Grey*/
 
-body,
-.timeline-content h2 {
+.navbar-default{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.header h1, h2, .header h3, h4, h5, h6{
+    color: #444349;
+}
+
+.rush h1, h2, h3, h4, h5, h6{
+    color: #FFF;
+}
+
+.rush .timeline-content {
+    color: #C2C2C2;
+}
+
+.rush .timeline-content h2 {
     color: #FFF;
 }
 
@@ -45,7 +61,7 @@ body,
 }
 
 .nav-pills>li>a {
-    color: #C2C2C2;
+    color: #5c5c5c;
 }
 
 .form-control:focus {
