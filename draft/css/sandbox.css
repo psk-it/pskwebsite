@@ -1,0 +1,293 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+/*
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: absolute; 
+}*/
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    /*font-weight: 300;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.4;*/
+    position: relative;
+}
+
+h1{font-size: 30px;}
+
+
+svg { 
+    fill: #fff; 
+}
+
+.anchor{
+  display: block;
+  height: 50px; /*same height as header*/
+  margin-top: -50px; /*same height as header*/
+  visibility: hidden;
+}
+
+.header-above{
+  margin-top: -50px; /*same height as header*/
+}
+
+.room{
+    height:500px;
+    background:#eeeeee;
+}
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+.fixed { height:100%; overflow-y:scroll;}
+.scrollit { height:100%;}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777; 
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.ttt-icon object{
+    data="img/ttt-light.svg";
+    vertical-align:middle;
+    type="image/svg+xml";
+}
+
+.vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.circle-avatar{
+    /* make it responsive */
+    max-width: 100%;
+    width:100%;
+    height:auto;
+    display:block;
+    /* div height to be the same as width*/
+    padding-top:100%;
+
+    /* make it a cirkle */
+    border-radius:50%;
+    
+
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #000000;
+}
+
+
+/* ================================================
+   Brothers
+   ================================================ */
+
+
+.brothers {
+    padding-bottom: 50px;
+}
+
+.brother-info {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.brother-info img {
+    border-radius: 50%;
+}
+
+.brother-info p {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0 0;
+    line-height: 1;
+}
+
+.brother-info span {
+    font-size: 13px;
+}
+
+.brother-slider .slick-prev,
+.brother-slider .slick-next {
+    top: 40%;
+}
+
+
+.section-title {
+    text-align: center;
+    margin: 70px 0 40px;
+}
+
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+    margin-bottom: 10px;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/kenmore.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/callout.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+.img-portfolio:hover {
+    opacity: 0.8;
+}
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media (max-width:1000px) {
+    .map {
+        height: 75%;
+    }
+}
+
+/* Footer */
+
+footer {
+    padding: 100px 0;
+}
