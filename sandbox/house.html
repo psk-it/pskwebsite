@@ -39,30 +39,25 @@
 
         function changeFloors() {
             var hash = window.location.hash;
-            ["f1", "f2", "f3"].forEach(function(el, ind, arr) {
-                document.getElementById(el).style.fill = "#000000";
-                document.getElementById(el + "-text").style.fill = "white";
+            var rooms = ["first-lounge", "second-lounge", "third-lounge"]
+            rooms.forEach(function(el, ind, arr) {
+                document.getElementById("button-" + el).style.fill = "#000000";
+                document.getElementById("button-" + el + "-text").style.fill = "white";
             })
-            console.log(hash);
-            if (hash == "#g1") {
-                document.getElementById("f1").style.fill = "#ffffff";
-                document.getElementById("f1-text").style.fill = "black";
-                document.getElementById("floorplan").setAttribute('src', 'img/la1.jpg');
-            } else if (hash == "#g2") {
-                document.getElementById("f2").style.fill = "#ffffff";
-                document.getElementById("f2-text").style.fill = "black";
-                document.getElementById("floorplan").setAttribute('src', 'img/la2.jpg');
-            } if (hash == "#g3") {
-                document.getElementById("f3").style.fill = "#ffffff";
-                document.getElementById("f3-text").style.fill = "black";
-                document.getElementById("floorplan").setAttribute('src', 'img/la3.jpg');
-            }
+            rooms.forEach(function(el, ind, arr) {
+                if (hash == "#" + el) {
+                    document.getElementById("button-" + el).style.fill = "#ffffff";
+                    document.getElementById("button-" + el + "-text").style.fill = "black";
+                    document.getElementById("floorplan").setAttribute('src', 'img/' + el +'.jpg');
+                    return true;
+                }
+            })
         }
 
         var shiftWindow = function() { window.scrollBy(0, -50) };
         var alertChange = function() {console.log("ALERT!")};
         window.addEventListener("hashchange", changeFloors);
-        function load() { if (window.location.hash) {shiftWindow();} }//else {window.location.hash = "#g1";}}
+        function load() { if (window.location.hash) {shiftWindow();} }//else {window.location.hash = "#first-lounge";}}
 
         function changeHashWithoutScrolling(hash) {
           var id = hash.replace(/^.*#/, ''),
@@ -150,22 +145,22 @@
         <div class="affix col-md-3 col-sm-4 col-xs-4 " align = "center" style="padding-top:15px;padding-right:15px;background:#bbbbbb;height:100%">
 
 
-                <a href="#g1" >
+                <a href="#first-lounge" >
                     <svg id="floors" width="100%" height="60">
-                        <rect id= "f1" width="100%" height="50" style="fill:#000000;"></rect>
-                        <text id="f1-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>Floor 1</tspan></text>
+                        <rect id= "button-first-lounge" width="100%" height="50" style="fill:#000000;"></rect>
+                        <text id="button-first-lounge-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>First Lounge</tspan></text>
                     </svg>
                 </a>
-                <a href="#g2" >
+                <a href="#second-lounge" >
                     <svg id="floors" width="100%" height="60">
-                        <rect id= "f2" width="100%" text-anchor="middle" height="50" style="fill:#000000;"></rect>
-                        <text id="f2-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>Floor 2</tspan></text>
+                        <rect id= "button-second-lounge" width="100%" text-anchor="middle" height="50" style="fill:#000000;"></rect>
+                        <text id="button-second-lounge-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>Second Lounge</tspan></text>
                     </svg>
                 </a>
-                <a href="#g3" >
+                <a href="#third-lounge" >
                     <svg id="floors" width="100%" height="60">
-                        <rect id= "f3" width="100%" height="50" style="fill:#000000;"></rect>
-                        <text id="f3-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>Floor3</tspan></text>
+                        <rect id= "button-third-lounge" width="100%" height="50" style="fill:#000000;"></rect>
+                        <text id="button-third-lounge-text" x="50%" y="50%" font-size = "21" dominant-baseline="middle" text-anchor="middle" fill="white"><tspan>Third Lounge</tspan></text>
                     </svg>
                 </a>
 
@@ -175,138 +170,63 @@
         </div>
     </div>
     <div  >
-                <div class="col-md-3 col-sm-4 col-xs-4 " style="background:#bbbbbb;height:100%">
+                <div class="col-md-3 col-sm-4 col-xs-4 " style="height:100%;">
                     
                     
 
                 </div>
-                <div id = "content" class="col-md-9 col-sm-8 col-xs-8" style="background:#eeeeee;">
-                    <h2> House Tour </h2>
-                    Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                    Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                    Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                    Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                    Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                    Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                    <section id="g1">
-                        <span class="anchor"></span>
-                        <a href="#g3"><h3>Scroll Content 1</h3></a>
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
+                <div id = "content" class="col-md-9 col-sm-8 col-xs-8" >
+                    
+                    <section  id="first-lounge">
+                        <span   class="anchor"></span>
+                        <div class = "row room" style="background-color:#ffffff;">
+                            <div class = "col-xs-12">
+                                <h2> House Tour </h2>
+                                This is the introduction. 
+        
+                            </div>
+                        </div>
                     </section>
-                    <section id="g2">
-                        <span class="anchor"></span>
-                        <h3 >Scroll Content 2</h3>
 
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
+                    <section  id="first-lounge">
+                        <span   class="anchor"></span>
+                        <div class = "row room" >
+                            <div class = "col-xs-12">
+                                <h3>First Lounge</h3>
+                                This is the first section. 
+        
+                            </div>
+                        </div>
                     </section>
-                    <section id="g3">
-                        <span class="anchor"></span>
-                        <h3 >Scroll Content 3</h3>
+                    <section  id="second-lounge">
+                        <span   class="anchor"></span>
+                        <div class = "row room" style="background-color:#e0e0e0;">
+                            <div class = "col-xs-12">
+                                <h3>Second Lounge</h3>
+                                This is the second section. 
+        
+                            </div>
+                        </div>
+                    </section>
+                    <section  id="third-lounge">
+                        <span   class="anchor"></span>
+                        <div class = "row room" >
+                            <div class = "col-xs-12">
+                                <h3>Third Lounge</h3>
+                                This is the third section. 
+        
+                            </div>
+                        </div>
+                    </section>
 
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
-
-                        Lorem ipsum dolor sit amet, meis eruditi mea te, no quo wisi choro, ad placerat invenire definitiones mei. Purto vero illud at eum, eos magna altera assentior ut, sea doctus periculis te. Eum graece dictas at. In habeo labore salutatus eam, et autem idque abhorreant his.
-
-                        Ius et tollit salutatus, at mea nonumy cetero. Eam quis aliquid intellegat et, per an omnium animal pertinax. Invidunt deserunt id nam. Nam dolor partiendo persecuti ea. Pri ne etiam doctus. Vix odio commodo phaedrum an. Eos ut liber forensibus, mea cu elitr inimicus laboramus.
-
-                        Mel accusam partiendo in, his et possim fierent intellegat. His ut tempor platonem, ei eius omittam duo, cum no regione facilisis. Eam vide fierent te. Eu cibo nostro adipiscing quo, nulla clita dissentias vel ea. Denique dignissim assentior ut sit, ea cum oratio everti efficiendi, duo nihil sententiae ut.
-
-                        Nisl idque cu ius, iuvaret contentiones at qui, ne ferri fabulas his. Adipisci posidonium ei mel, per in dicta epicuri insolens. Ea vis ubique tibique comprehensam, ne eros phaedrum mel. Vel at dolor appetere eleifend. Eruditi officiis at pro. Tale viderer scriptorem cu pro, no sonet dolorem ius, qui ei dolor consul placerat. Ne vel option veritus.
-
-                        Ad qui erroribus imperdiet, eum in dicant similique, at libris sententiae eos. Eum possim incorrupte et, quas cetero detracto quo ei. In quo mundi simul quaestio, munere consulatu efficiantur an pri, per cu erroribus aliquando pertinacia. Ad eos electram moderatius, modo platonem conceptam cu vel. Ut sit audiam luptatum, his ne brute persius. Eu quidam audire disputando sit. Putent civibus mea cu, suas wisi inimicus id sed.
+                    <section >
+                        <span   class="anchor"></span>
+                        <div class = "row room" style="background-color:#888888;">
+                            <div class = "col-xs-12" >
+                                Filler. There is nothing here.
+        
+                            </div>
+                        </div>
                     </section>
                     
                     <div height="500px" id = "none">

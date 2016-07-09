@@ -11,10 +11,18 @@ body {
     width: 100%;
     height: 100%;
 }
-
+/*
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
     position: absolute; 
+}*/
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    /*font-weight: 300;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.4;*/
+    position: relative;
 }
 
 h1{font-size: 30px;}
@@ -29,6 +37,15 @@ svg {
   height: 50px; /*same height as header*/
   margin-top: -50px; /*same height as header*/
   visibility: hidden;
+}
+
+.header-above{
+  margin-top: -50px; /*same height as header*/
+}
+
+.room{
+    height:500px;
+    background:#eeeeee;
 }
 
 /* Carousel base class */
@@ -101,6 +118,48 @@ svg {
 }
 
 
+/* ================================================
+   Brothers
+   ================================================ */
+
+
+.brothers {
+    padding-bottom: 50px;
+}
+
+.brother-info {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.brother-info img {
+    border-radius: 50%;
+}
+
+.brother-info p {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0 0;
+    line-height: 1;
+}
+
+.brother-info span {
+    font-size: 13px;
+}
+
+.brother-slider .slick-prev,
+.brother-slider .slick-next {
+    top: 40%;
+}
+
+
+.section-title {
+    text-align: center;
+    margin: 70px 0 40px;
+}
+
 
 .text-vertical-center {
     display: table-cell;
@@ -170,53 +229,6 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
-
-/* About */
-
-.about {
-    padding: 50px 0;
-}
-
-/* Services */
-
-.brothers {
-    padding: 50px 0;
-    background: linear-gradient(#444444, #666666);
-}
-
-
-
-.brothers .info {
-    background-color:#44bbff;
-    margin-top:160px;
-    margin-bottom: 20px;
-    margin-right:20px;
-    margin-left:20px;
-    border-radius:20px;
-    padding-top:15px;
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:15px;
-}
-
-.brother-icon {
-    margin-bottom: 30px;
-}
-
-.brother-icon:hover div{
-    
-}
-
-.brothers a{
-    font-weight:inherit;
-    color:inherit;
-}
-
-.brothers a:hover{
-    font-weight:inherit;
-    color:#44bbff;
-}
-
 
 
 
