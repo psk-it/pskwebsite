@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var NavBarComponent = (function () {
     function NavBarComponent() {
+        this.pages = ["academics", "athletics", "brothers", "house", "rush", "social"];
     }
     NavBarComponent = __decorate([
         core_1.Component({
@@ -22,4 +23,4 @@ var NavBarComponent = (function () {
     return NavBarComponent;
 }());
 exports.NavBarComponent = NavBarComponent;
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=app.navbar_component.js.map

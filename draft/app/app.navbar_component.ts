@@ -3,4 +3,6 @@ import { Component } from '@angular/core';
   selector: 'navbar',
   templateUrl: 'views/navbar.html'
 })
-export class NavBarComponent { }
+export class NavBarComponent {
+	pages= ["academics", "athletics","brothers","house","rush","social"];
+}
