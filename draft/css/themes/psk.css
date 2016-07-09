@@ -43,6 +43,10 @@ body,
     color: #444349;
 }
 
+.brothers h1, .brothers h2, .brothers h3, .brothers h4, h5, h6{
+    color: #444349;
+}
+
 .rush h1, h2, h3, h4, h5, h6{
     color: #FFF;
 }
