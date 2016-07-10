@@ -1099,6 +1099,12 @@ p,
     color: #FFF;
 }
 
+.house {
+    background: #0E4EAD;
+    padding: 30px 0;
+    color: #FFF;
+}
+
 .section-title {
     text-align: center;
     margin: 70px 0 40px;
@@ -1235,6 +1241,11 @@ p,
 .timeline-block:last-child {
     margin-bottom: 0;
     background-color: #CC333F; /* RED */
+}
+
+.house .timeline-block:last-child {
+    margin-bottom: 0;
+    background-color: #0E4EAD; /* BLUE */
 }
 
 @media only screen and (min-width: 800px) {
