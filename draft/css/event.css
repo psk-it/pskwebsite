@@ -1206,13 +1206,13 @@ p,
     width: 3px;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 800px) {
     .timeline {
         margin-top: 3em;
         margin-bottom: 0;
     }
     .timeline::before {
-        left: 50%;
+        left: 35%;
         margin-left: -2px;
     }
 }
@@ -1237,9 +1237,9 @@ p,
     background-color: #CC333F; /* RED */
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 800px) {
     .timeline-block {
-        margin: 2em 0;
+        margin: .75em 0;
     }
     .timeline-block:first-child {
         margin-top: 0;
@@ -1260,11 +1260,11 @@ p,
     background: #FFF;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 800px) {
     .timeline-bullet {
         width: 15px;
         height: 15px;
-        left: 50%;
+        left: 35%;
         margin-left: -8px;
         /* Force Hardware Acceleration in WebKit */
         
@@ -1278,6 +1278,7 @@ p,
     margin-left: 35px;
     min-height: 50px;
     margin-bottom: 10px;
+    /*max-width: 30%;*/
 }
 
 .timeline-content:after {
@@ -1320,7 +1321,7 @@ p,
 .timeline-content .date {
     float: left;
     padding: 0;
-    opacity: .7;
+    opacity: 1.;
     font-weight: 00;
     /*color: #FFF;*/
 }
@@ -1345,13 +1346,14 @@ p,
     }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 800px) {
     .timeline-content {
-        margin-left: 0;
-        width: 47.3%;
+        margin-left: 35%;
+        width: 62%;
+        padding-right:25%;
     }
-    .timeline .timeline-block:nth-child(odd) .timeline-content h2,
-    .timeline .timeline-block:nth-child(odd) .timeline-content p {
+/*    .timeline .timeline-block .timeline-content h2,
+    .timeline .timeline-block .timeline-content p {
         text-align: right;
     }
     .timeline-content::before {
@@ -1359,33 +1361,32 @@ p,
         left: 100%;
         border-color: transparent;
         border-left-color: white;
-    }
+    }*/
     .timeline-content .read-more {
         float: left;
     }
     .timeline-content .date {
         position: absolute;
-        width: 100%;
-        left: 112%;
+        width: 50%;
+        right: 110%;
         top: 0;
         font-size: 20px;
     }
-    .timeline-block:nth-child(even) .timeline-content {
+    .timeline-block .timeline-content {
         float: right;
     }
-    .timeline-block:nth-child(even) .timeline-content::before {
+    .timeline-block .timeline-content::before {
         top: 24px;
         left: auto;
         right: 100%;
         border-color: transparent;
         border-right-color: white;
     }
-    .timeline-block:nth-child(even) .timeline-content .read-more {
+    .timeline-block .timeline-content .read-more {
         float: right;
     }
-    .timeline-block:nth-child(even) .timeline-content .date {
+    .timeline-block .timeline-content .date {
         left: auto;
-        right: 112%;
         text-align: right;
     }
 }
