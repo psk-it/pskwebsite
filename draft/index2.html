@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO -->
+    <meta name="author" content="psk.mit.edu">
+    <meta name="description" content="Phi Sigma Kappa Omicron Chapter of MIT">
+    <meta name="keywords" content="MIT, fraternity, summer, rent, housing, phi sigma kappa, phi sig, psk, omicron, best frat, frat, chill, dope, parties, fun">
+
+    <!-- Page Title -->
+    <title>MIT Phi Sig</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Google Font : Open Sans & Montserrat -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Plugins -->
+    <link href="css/plugins/animate.css" rel="stylesheet">
+    <link href="css/plugins/slick2.css" rel="stylesheet">
+    <link href="css/plugins/magnific-popup.css" rel="stylesheet">
+    <link href="css/plugins/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/streamline-icons.css" rel="stylesheet">
+    <link href="css/plugins/pace.css" rel="stylesheet">
+
+    <!-- Event Style -->
+    <link href="css/event.css" rel="stylesheet">
+
+    <!-- Color Theme -->
+    <link href="css/themes/psk.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="js/ie/respond.min.js"></script>
+  <![endif]-->
+
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+
+    <script>
+      //System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
+  <!-- Google Tag Manager -->
+ <!--  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K3XHT8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K3XHT8');</script> -->
+  <!-- End Google Tag Manager -->
+    <!--Preloader div-->
+    <div class="preloader"></div>
+
+    <!-- Fixed navbar -->
+    <navbar></navbar>
+
+    <!-- // End Fixed navbar -->
+
+    <header id="top" class="header header_top-bg header-wrap">
+        <div class="text-vertical-center">
+            <object data="img/ttt-transparent.svg" height="300" style="vertical-align:middle;" type="image/svg+xml" ></object>
+            <h1 width="80%">Phi Sigma Kappa</h1>
+            <h3>Omicron Chapter &mdash; MIT</h3>
+            <br>
+            <a class="btn btn-red btn-lg" href="#brothers">Learn About Us</a>
+            <a class="btn btn-red btn-lg" href="#brothers">Tour Our Home</a>
+            <a class="btn btn-red btn-lg" href="#rush">Rush Schedule</a>
+        </div>
+        <div height="300" />
+
+    </header>
+    <!-- end .header -->
+
+
+    <section id="rush" class="rush">
+
+        <div class="container">
+            
+             <div class="countdown_wrap">
+
+                <h3 class="countdown_title text-center">RUSH STARTS IN</h3>
+
+                <!-- Countdown JS for the Event Date Starts here.
+    TIP: You can change your event time below in the Same Format.  -->
+
+                <ul id="countdown" data-event-date="09 september 2016 08:30:00">
+                    <li> <span class="days">00</span>
+                        <p class="timeRefDays">days</p>
+                    </li>
+                    <li> <span class="hours">00</span>
+                        <p class="timeRefHours">hours</p>
+                    </li>
+                    <li> <span class="minutes">00</span>
+                        <p class="timeRefMinutes">minutes</p>
+                    </li>
+                    <li> <span class="seconds">00</span>
+                        <p class="timeRefSeconds">seconds</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <!-- end .container -->
+        <div class="container">
+            <div class="section-title">
+                <h4>THE SCHEDULE</h4>
+                <!--<br>
+                    <ul>
+                        <li>Go 0 to 100mph in 8 hours. Get up and running with H2O and machine learning in a day.</li>
+                        <li>Cheatmode - Learn 10 expert tricks to hack Deep Learning</li>
+                        <li>Learn the anatomy of a smart application</li>
+                        <li>Meet the brains behind H2O</li>
+                    </ul>-->
+                </p>
+            </div>
+
+            <div class="nav-center">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" role="tablist" id="schedule-tabs">
+                    <li role="presentation" class="active"><a href="#saturday" aria-controls="tab" role="tab" data-toggle="tab">Saturday</a></li>
+                    <li role="presentation"><a href="#sunday" aria-controls="sunday" role="tab" data-toggle="tab">Sunday</a></li>
+                    <li role="presentation"><a href="#monday" aria-controls="monday" role="tab" data-toggle="tab">Monday</a></li>
+                    <li role="presentation"><a href="#tuesday" aria-controls="tuesday" role="tab" data-toggle="tab">Tuesday</a></li>
+                    <li role="presentation"><a href="#wednesday" aria-controls="wednesday" role="tab" data-toggle="tab">Wednesday</a></li>
+                    <!-- <li role="presentation"><a href="#day3" aria-controls="messages" role="tab" data-toggle="tab">Day Three</a></li> -->
+                </ul>
+
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content" width="50%">
+
+                <!-- ########## Schedule Timeline DAY 01 Starts ########### -->
+
+                <div role="tabpanel" class="tab-pane active" id="saturday">
+                     <section class="timeline">
+
+                         <!-- ###### House Tours -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2 >House Tours</h2>
+                                <p> Come tour the historic Phi Sig house and grab a bite to eat in the heart of Kenmore Square. </p>
+                                <span class="date"><b>12:30 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Steakhouse -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Phi Sig Steakhouse</h2>
+                                <p>Come enjoy a juicy steak, fresh off the grill. Not hungry? Show us your PS4 skills or come toss a football with us until dark.</p>
+                                <span class="date"><b>05:00 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ####### Grafiti Party -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Graffiti Party</h2>
+                                    <p> GRAFFITI is back. Now with twice as many glow sticks, highlighters, and bass. </p>
+                                    <span class="date"><b>10:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ########## Schedule Timeline DAY 02 Starts ########### -->
+
+                <div role="tabpanel" class="tab-pane" id="sunday">
+                     <section class="timeline">
+
+                         <!-- ###### Fraternal House of Pancakes -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2 >Fraternal House of Pancakes</h2>
+                                <p> Have a hearty, homemade breakfast and prepare to join us for a day of paintballing. </p>
+                                <span class="date"><b>9:00 AM - 10:00 AM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Paintball -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Paintball</h2>
+                                    <p>Light up the brothers of Phi Sig on one of the best paintball fields on the East Coast.</p>
+                                    <span class="date"><b>10:00 AM - 3:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ####### FIFA and Fisbee -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>FIFA and Frisbee</h2>
+                                <p> Too cool for paintball or just slept in? Challenge us to a Fifa tournament or toss a frisbee with some brothers. </p>
+                                <span class="date"><b>12:00 PM - 4:00 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ####### Back Bay BBQ -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Back Bay BBQ</h2>
+                                <p> Kick back and enjoy some juicy burgers, Phi Sig style. Feeling something different? Try some of our brothers' homemade pulled pork sandwiches. </p>
+                                <span class="date"><b>5:00 PM - 6:00 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ####### Mike's Pastries -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Mike's Pastries</h2>
+                                <p> Mmm... Cannoli. </p>
+                                <span class="date"><b>6:00 PM - 8:00 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ####### Comedy Club -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Comedy Club</h2>
+                                    <p> Phi Sigs love to hit the town. Join us as we laugh our asses off and show you a bit of Boston nightlife. </p>
+                                    <span class="date"><b>6:30 PM - 9:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+
+                <!-- ########## Schedule Timeline DAY 03 Starts ########### -->
+
+                <div role="tabpanel" class="tab-pane" id="monday">
+                     <section class="timeline">
+
+                         <!-- ###### Fraternal House of Pancakes -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2 >Fraternal House of Pancakes</h2>
+                                <p> Have a hearty, homemade breakfast and prepare to join us for a day of paintballing. </p>
+                                <span class="date"><b>9:00 AM - 10:00 AM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Jetskiing -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Jetskiing</h2>
+                                    <p>Spend a day jetskiing and hanging out at the beach with Phi Sig.</p>
+                                    <span class="date"><b>10:00 AM - 4:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ####### Rock Climbing -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Rock Climbing</h2>
+                                <p> Check out one of Boston's best gyms with terrain for beginners and experts alike. </p>
+                                <span class="date"><b>12:00 PM - 4:00 PM</b></span>
+                            </div>
+                        </div>
+
+   
+                        <!-- ####### Steak and Lobster -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Steak and Lobster</h2>
+                                    <p> Join us for two staples of the Phi Sig diet and a rush week classic.</p>
+                                    <span class="date"><b>6:00 PM - 8:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ####### Movie Night -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Movie Night with Phi Sig</h2>
+                                <p> Enjoy a movie on our extra-large projector and eat some popcorn.</p>
+                                <span class="date"><b>8:00 PM - 10:00 PM</b></span>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+                 <!-- ########## Schedule Timeline DAY 04 Starts ########### -->
+
+                <div role="tabpanel" class="tab-pane" id="tuesday">
+                     <section class="timeline">
+
+                         <!-- ###### Fraternal House of Pancakes -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2 >Fraternal House of Pancakes</h2>
+                                <p> Have a hearty, homemade breakfast and prepare to join us for a day of paintballing. </p>
+                                <span class="date"><b>9:00 AM - 10:00 AM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Battle Canoeing -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Battle Canoe</h2>
+                                    <p>A Phi Sig original. It starts off as a typical canoe trip, but all hell breaks loose once we round the first corner.</p>
+                                    <span class="date"><b>10:00 AM - 4:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ####### Iron Chef -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <div class="main-event">
+                                    <h2 style="color:#353535;">Phi Sig Iron Chef</h2>
+                                    <p> Come let our brother chefs show you some of their best recipes and finest cuisine at Phi Sig's Iron Chef. Past recipes have included slow-roasted pork and braised beef shank; come and see what we have in store this year!</p>
+                                    <span class="date"><b>6:00 PM - 8:00 PM</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+                 <!-- ########## Schedule Timeline DAY 05 Starts ########### -->
+
+                <div role="tabpanel" class="tab-pane" id="wednesday">
+                     <section class="timeline">
+
+                         <!-- ###### Lunch on Steps -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Lunch on the Steps</h2>
+                                <p> Have a hearty, homemade breakfast and prepare to join us for a day of paintballing. </p>
+                                <span class="date"><b>9:00 AM - 10:00 AM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Back Bay Banquet -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Back Bay Banquet</h2>
+                                <p> Good food from local Kenmore Square favorites. </p>
+                                <span class="date"><b>6:00 PM - 8:00 PM</b></span>
+                            </div>
+                        </div>
+
+                        <!-- ###### Driving Range & Mini Golf -->
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet" data-wow-delay="0s">
+                            </div>
+
+                            <div class="timeline-content">
+                                <h2>Driving Range & Mini Golf</h2>
+                                <p> Join us for miniature golf and driving range practice on the hallowed course known as the Augusta National of Lower Suffolk County, MA. </p>
+                                <span class="date"><b>7:30 PM - 9:30 PM</b></span>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+        </div>
+        <!-- end .container -->
+
+    </section>
+
+    <!--
+     Our brothers
+     ====================================== -->
+
+    <section class="brothers" id="brothers">
+        <div class="container">
+
+            <div class="section-title">
+                <h4>OUR BROTHERS</h4>
+            </div>
+
+            <brother-component *ngFor="let brother of brothers | async" [brother]="brother"></brother-component>
+                    
+            
+
+        </div>
+    
+            <!-- <div class="brother-slider"> -->
+            <div style="display: block; text-align:center;">
+        
+                    <div class="brother-info">
+                        <a href="http://mitathletics.com/sports/m-lacros/index">
+                            <img src="img/head.jpg" alt="Sri Ambati" class="img-responsive center-block">
+
+                            <p>Michael Traub</p>
+                            <span>Senior <br> Aliso Viejo, CA </span>
+                        </a>
+                    </div>
+                
+                <!-- end .brother-info -->
+                
+                <div class="brother-info">
+                    <a href="http://mitathletics.com/sports/m-lacros/index">
+
+                        <img src="img/head.jpg" alt="Sri Ambati" class="img-responsive center-block">
+
+                        <p>Alex Latham</p>
+                        <span>Senior <br> Chicago, IL </span>
+                    </a>
+                </div>
+                
+                <!-- end .brother-info -->
+                <a href="http://mitathletics.com/sports/m-lacros/index">
+                    <div class="brother-info">
+
+                        <img src="img/head.jpg" alt="Sri Ambati" class="img-responsive center-block">
+
+                        <p>Rory Beyer</p>
+                        <span>Senior <br> San Mateo, CA </span>
+                    </div>
+                </a>
+                <!-- end .brother-info -->
+            </div>
+        </div>
+        <!-- end .container -->
+    </section>
+    <!-- end section.brothers -->
+
+
+  
+    <!--
+     FAQ
+     ====================================== -->
+
+    <section class="faq" id="faq">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h3>Why Phi Sig?</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h6 class="faq-title">What are my transport/parking options getting to the event?</h6>
+                    <p>The <a href="http://www.transitNYC.com/travel_information/station.aspx?StopId=148" target="_blank">El Morgan</a> stop is less than a block away and the <a href="http://metrarail.com/metra/en/home/maps_schedules/find_my_metra_station_results.html?stationSearch-address=west+loop&stationSearch-distance=2&stationSearch-submit.x=0&stationSearch-submit.y=0&stationSearch-submit=Go" target="_blank">Metra</a> is about 1 mile from <a href="http://venueoneNYC.com/" target="_blank">VenueOne</a>. There is street parking around the area and it is first come first serve.</p>
+
+
+                    <h6 class="faq-title">What can/can't I bring to the event?</h6>
+                    <p>Save time and bring your laptop with the latest version of H2O loaded and ready to go! If this is the first time you are installing H2O you can find a handy tutorial with step by step <a href="http://h2o.ai/download" target="_blank">instructions here</a>.</p>
+                    <h6 class="faq-title">Is my registration/ticket transferrable?</h6>
+                    <p>We understand things change and fire drills come up. So if you have to transfer your ticket to a friend or colleague, we can do that for you. No change fee. No hassle. No sweat. Can't make NYC but would like us to transfer your registration to an upcoming H2O Open Tour event? We can do that, too. There will only be an increase in fee if you join us for the two-day program in San Francisco or New York. But hopefully this is neither here nor there -and we'll see you in NYC! You can contact us via the form at the bottom of this page or our Eventbrite registration page.</p>
+                </div>
+               
+                <div class="col-md-6">
+
+
+                    <h6 class="faq-title">Who attends this event?</h6>
+                    <p>Designed for data scientists, data engineers and business analysts alike, the H2O Open Tour offers something for everyone in our community no matter your skillset.</p>
+                    <h6 class="faq-title">How do I sign up for a Hydration Station appointment?</h6>
+                    <p>The H2O Hydration Station is your chance to sign up for 1:1 consultation with a product expert. Signing up for an appointment is super easy! Appointments are scheduled on site at the Hydration Station on a first-come, first-served basis - so arrive early.</p>
+                    <h6 class="faq-title">Still haven't found what you are looking for?</h6>
+                    <p>You can contact us at <a href="mailto:events@h2o.ai">events@h2o.ai</a> or via the form at the bottom of this page with any questions related to the Open Tour event. And please share your ideas about topics or brothers that make you excited.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section.faq -->
+
+
+    <!-- ::: BEGIN-VENUE ::: -->
+ <!--    <section id="directions" class="directions vertical-space-lg">
+
+        <div class="container">
+            <div class="section-title top-space-sm">
+                <h4>GET DIRECTIONS</h4>
+                <p>Fill the form below to get directions to our event location</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                    <form action="/routebeschrijving" onSubmit="calcRoute();return false;" id="routeForm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="routeStart">Direction From:</label>
+                                    <input type="text" id="routeStart" class="form-control" placeholder="Mountain View">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="routeVia">Via<small> (Optional)</small> </label>
+                                    <input type="text" class="form-control" id="routeVia" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Travel mode:</label>
+
+                            <label class="radio-inline" for="travelMode1">
+                                <input type="radio" name="travelMode" id="travelMode1" value="DRIVING" checked /> Driving
+                            </label>
+                            <label class="radio-inline" for="travelMode2">
+                                <input type="radio" name="travelMode" id="travelMode2" value="BICYCLING" /> Bicycling
+                            </label>
+                            <label class="radio-inline" for="travelMode3">
+                                <input type="radio" name="travelMode" id="travelMode3" value="TRANSIT" /> Public transport
+                            </label>
+                            <label class="radio-inline" for="travelMode4">
+                                <input type="radio" name="travelMode" id="travelMode4" value="WALKING" /> Walking
+                            </label>
+
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-location-arrow"></i> Get Directions </button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="directions-results">
+
+                        <div id="directionsPanel">
+                            <div class="direction-text">Enter Direction from and Travel Mode from the left form to see directions. </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--end-of-row-->
+        </div>
+
+    </section> -->
+    <!-- ::: END MAP ::: -->
+
+    <!--
+     Contact us
+     ====================================== -->
+
+    <div class="highlight">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contact-box">
+                        <img src="images/location-icon.png" alt="location icon">
+                        <h5>ADDRESS</h5>
+                        <p><a href="http://iac.com/" target="_blank">IAC Building</a>
+                            <br>555 W 18th St
+                            <br>New York, NY 10011
+                            <br>
+                            <br>Time: 8:30 AM to 8:00 PM
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="contact-box">
+                        <img src="images/email-icon.png" alt="email icon">
+                        <h5>CONTACT</h5>
+                        <p><a href="mailto:events@h2o.ai">events@h2o.ai</a>
+                        <br> +1 (650) 227- 4572
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--  // end .row -->
+        </div>
+    </div>
+    <!-- //  end .highlight -->
+
+    <!-- Back to top floating button -->
+    <a href="#top" class="back_to_top"><img src="img/back_to_top.png" alt="back to top"></a>
+
+
+    <!--
+     Javascripts
+     ====================================== -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- 3rd party Plugins -->
+    <script src="js/plugins/countdown.js"></script>
+    <script src="js/plugins/wow.js"></script>
+    <script src="js/plugins/slick.js"></script>
+    <script src="js/plugins/magnific-popup.js"></script>
+    <script src="js/plugins/validate.js"></script>
+    <script src="js/plugins/appear.js"></script>
+    <script src="js/plugins/count-to.js"></script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

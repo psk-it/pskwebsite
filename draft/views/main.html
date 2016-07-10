@@ -11,7 +11,6 @@
             <br>
             <a class="btn btn-default btn-xl" href="#brothers">Learn About Us</a><a class="btn btn-default btn-xl" href="#brothers">Tour Our Home</a><a class="btn btn-default btn-xl" href="#rush">Rush Schedule</a>
         </div>
-        <div height="300" />
 
     </header>
     <!-- end .header -->
@@ -125,36 +124,7 @@
                             </div>
                             <!-- timeline-content -->
                         </div>
-                        <!-- timeline-block -->
 
-<!--
-                        <div class="timeline-block">
-                            <div class="timeline-bullet wow zoomIn" data-wow-delay="0s">
-                            </div>
--->
-                            <!-- timeline-bullet -->
-
-<!--                            <div class="timeline-content">-->
-<!--                                <h2>Steam Product Demo</h2>-->
-                                <!--<p><b>Tom Kraljevic, VP of Engineering - H2O.ai</b></p>-->
-<!--                                <span class="date"><b>10:45 AM</b></span>-->
-<!--                            </div>-->
-                            <!-- timeline-content -->
-<!--                        </div>-->
-                        <!-- timeline-block -->
-
-<!--
-                        <div class="timeline-block">
-                            <div class="timeline-bullet wow zoomIn" data-wow-delay="0s">
-                            </div>
-                            <div class="timeline-content">
-                                <h2>Break</h2>
-                                <span class="date"><b>11:00 AM</b></span>
-                            </div>
-                        </div>
--->
-
-                        <!-- timeline-block -->
 
                         <div class="timeline-block">
                             <div class="timeline-bullet wow zoomIn" data-wow-delay="0s">
@@ -588,7 +558,7 @@ We describe the architecture capable of scaling and handling billions of events 
                 <h4>OUR BROTHERS</h4>
             </div>
 
-            <brother-component *ngFor="let brother of brothers | async" [brother]="brother"></brother-component>
+            <brother-component *ngFor="let brother of brothers" [brother]="brother"></brother-component>
                     
             
 

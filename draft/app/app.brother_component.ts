@@ -7,18 +7,13 @@ export class Brother {
 	year:  string;
 
 }
-const BROTHERS: Brother[]=[
-
-
 @Component({
   selector: 'brother-component',
   templateUrl: 'views/brother.html'
 })
-
 export class BrotherComponent {
 	@Input() brother: Brother;
 	constructor(){
 		console.log("brother component ctor");
 	}
-	
 }

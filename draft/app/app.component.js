@@ -9,28 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Brother = (function () {
-    function Brother() {
+var app_brother_component_1 = require('./app.brother_component');
+var app_navbar_component_1 = require('./app.navbar_component');
+var BROTHERS = [
+    { photo_file: 'img/head.jpg', name: 'Michael Traub', major: '8,18C', year: '2017' },
+    { photo_file: 'img/head.jpg', name: 'SchMichael Traub', major: '8,18C', year: '2017' }
+];
+var AppComponent = (function () {
+    function AppComponent() {
+        this.brothers = BROTHERS;
+        console.log("app-body component ctor");
     }
-    return Brother;
-}());
-exports.Brother = Brother;
-var BrotherComponent = (function () {
-    function BrotherComponent() {
-        console.log("brother component ctor");
-    }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Brother)
-    ], BrotherComponent.prototype, "brother", void 0);
-    BrotherComponent = __decorate([
+    AppComponent = __decorate([
         core_1.Component({
-            selector: 'brother-component',
-            templateUrl: 'views/brother.html'
+            selector: 'app-body',
+            templateUrl: 'views/main.html',
+            directives: [app_navbar_component_1.NavBarComponent, app_brother_component_1.BrotherComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], BrotherComponent);
-    return BrotherComponent;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.BrotherComponent = BrotherComponent;
-//# sourceMappingURL=app.brother_component.js.map
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

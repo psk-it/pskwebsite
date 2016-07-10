@@ -10,13 +10,14 @@ class Brother:
 	Brother.fields = {
 		'name' : ['not_none', 'as_str'],
 		'year' : ['not_none', 'as_str'],
-		'courses' : ['as_list'],
-		'hometown' : ['as_str'],
-		'big' : ['as_str'], 
-		'littles' : ['as_list'], 
-		'sports' : ['as_list'], 
-		'description' : ['as_str'], 
-		'organizations' : ['as_list']
+		'photo': ['as_str']
+		'major' : ['as_str'],
+		# 'hometown' : ['as_str'],
+		# 'big' : ['as_str'], 
+		# 'littles' : ['as_list'], 
+		# 'sports' : ['as_list'], 
+		# 'description' : ['as_str'], 
+		# 'organizations' : ['as_list']
 	}
 
 	def __init__(self, **kwargs):
@@ -101,6 +102,9 @@ def main():
 			pass
 		elif i == 3: # delete brother
 			pass
+
+def read_brothers():
+	pass
 
 
 
