@@ -18,6 +18,7 @@ Surjith S M / @surjithctly
    Medium Grey    : #5c5c5c;
    Light Grey     : #818181;
    Lightest Grey  : #C2C2C2;
+   Very Lite Grey : #F4F4F4;
    White          : #ffffff;
    RED            : #CC333F;
 
@@ -43,11 +44,9 @@ body,
     color: #444349;
 }
 
-.brothers h1, .brothers h2, .brothers h3, .brothers h4, h5, h6{
-    color: #444349;
-}
 
-.rush h1, h2, h3, h4, h5, h6{
+
+.rush h1, .rush h2, .rush h3, .rush h4{
     color: #FFF;
 }
 
@@ -58,6 +57,19 @@ body,
 .rush .timeline-content h2 {
     color: #FFF;
 }
+
+.brothers {
+    background: #F4F4F4;
+    padding: 30px 0;
+}
+
+.brothers h1, .brothers h2, .brothers h3, .brothers h4{
+    color: #444349;
+}
+/*
+.faq h1, .faq h2, .faq h3, .faq h4, h5, h6{
+    color: #444349;
+}*/
 
 .timeline-content .date {
     color: #FFF;
@@ -107,6 +119,10 @@ body,
     background-color: #444349;
 }
 /*color*/
+
+.brothers a{
+  color:#444349;
+}
 
 a,
 a:hover,
@@ -174,6 +190,24 @@ a:focus {
 .btn-primary:active,
 .btn-primary.active {
     background-color: #3b3b3b;
+}
+
+.btn-red {
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+    color: #FFF;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active {
+    background-color: #CC333F;
+    border-color: #CC333F;
+    color: #FFF;
 }
 
 .btn-success {

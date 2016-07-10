@@ -648,14 +648,21 @@ p,
 }
 
 .header_top-bg {
-    background: url('../img/kenmore.jpg') no-repeat top center;
+    /*background: url('../img/kenmore.jpg') no-repeat top center;*/
     min-height: 155px;
+    /*width: 100%;*/
     padding: 40px 0 40px;
+    background: url('../img/kenmore.jpg') no-repeat top center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .header_bottom-bg {
 /*    background: url('../images/header_graphic_2.png') no-repeat bottom center;*/
-    min-height: 155px;
+    min-height: 50px;
+
     padding: 0px 0 40px;
 }
 
