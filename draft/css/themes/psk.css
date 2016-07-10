@@ -22,6 +22,10 @@ Surjith S M / @surjithctly
    White          : #ffffff;
    RED            : #CC333F;
 
+   Light blue     : #107FC9;
+   Blue           : #0E4EAD;
+   Dark blue      : #0B108C;
+
    
    */
 /* ================================================
@@ -72,6 +76,18 @@ body,
     color: #444349;
 }*/
 
+
+.house h1,  .house h3, .house h4{
+    color: #FFF;
+}
+
+.house .timeline-content {
+    color: #C2C2C2;
+}
+
+.house .timeline-content h2 {
+    color: #FFF;
+}
 
 
 .main-event {
