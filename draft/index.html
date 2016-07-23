@@ -56,13 +56,16 @@
 
 <body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
   <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K3XHT8"
+<!--   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K3XHT8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   -->
+<!--   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K3XHT8');</script>
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataayer','GTM-K3XHT8');</script>  -->
+
   <!-- End Google Tag Manager -->
     <!--Preloader div-->
     <div class="preloader"></div>
@@ -72,9 +75,9 @@
 
     <!-- // End Fixed navbar -->
 
-    <header id="top" class="header header_top-bg header-wrap">
-        <div class="text-vertical-center">
-            <object data="img/ttt-transparent.svg" height="300" style="vertical-align:middle;" type="image/svg+xml" ></object>
+    <header id="top" class="header header_top-bg header-wrap" style="height:100%; min-height:500px;">
+        <div style="height:100vh;min-height:500px; vertical-align: center;">
+            <object data="img/ttt-transparent.svg" style="height:50vw;min-height:50px;max-height:300px;" type="image/svg+xml" ></object>
             <h1 width="80%">Phi Sigma Kappa</h1>
             <h3>Omicron Chapter &mdash; MIT</h3>
             <br>
@@ -561,73 +564,6 @@
     <!-- end section.faq -->
 
 
-    <!-- ::: BEGIN-VENUE ::: -->
- <!--    <section id="directions" class="directions vertical-space-lg">
-
-        <div class="container">
-            <div class="section-title top-space-sm">
-                <h4>GET DIRECTIONS</h4>
-                <p>Fill the form below to get directions to our event location</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-6">
-
-                    <form action="/routebeschrijving" onSubmit="calcRoute();return false;" id="routeForm">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="routeStart">Direction From:</label>
-                                    <input type="text" id="routeStart" class="form-control" placeholder="Mountain View">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="routeVia">Via<small> (Optional)</small> </label>
-                                    <input type="text" class="form-control" id="routeVia" value="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only">Travel mode:</label>
-
-                            <label class="radio-inline" for="travelMode1">
-                                <input type="radio" name="travelMode" id="travelMode1" value="DRIVING" checked /> Driving
-                            </label>
-                            <label class="radio-inline" for="travelMode2">
-                                <input type="radio" name="travelMode" id="travelMode2" value="BICYCLING" /> Bicycling
-                            </label>
-                            <label class="radio-inline" for="travelMode3">
-                                <input type="radio" name="travelMode" id="travelMode3" value="TRANSIT" /> Public transport
-                            </label>
-                            <label class="radio-inline" for="travelMode4">
-                                <input type="radio" name="travelMode" id="travelMode4" value="WALKING" /> Walking
-                            </label>
-
-                        </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-location-arrow"></i> Get Directions </button>
-                        </div>
-                    </form>
-
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="directions-results">
-
-                        <div id="directionsPanel">
-                            <div class="direction-text">Enter Direction from and Travel Mode from the left form to see directions. </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!--end-of-row-->
-        </div>
-
-    </section> -->
-    <!-- ::: END MAP ::: -->
 
     <!--
      Contact us
@@ -684,6 +620,9 @@
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- makes the menu items change color as you scroll -->
+    <script src="js/activemenu.js"></script>
+
     <!-- 3rd party Plugins -->
     <script src="js/plugins/countdown.js"></script>
     <script src="js/plugins/wow.js"></script>
@@ -694,6 +633,9 @@
     <script src="js/plugins/count-to.js"></script>
     <!-- <script src="js/plugins/nicescroll.js"></script> -->
     <script src="js/plugins/parallax.js"></script>
+
+    
+    </script>
 
     <!-- Google Map -->
 <!--     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>

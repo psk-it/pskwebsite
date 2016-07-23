@@ -186,7 +186,7 @@ $(function() {
        ================================================ */
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() > 1000) {
+        if ($(window).scrollTop() > 800) {
             $('.back_to_top').fadeIn('slow');
         } else {
             $('.back_to_top').fadeOut('slow');
@@ -197,7 +197,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 50
-        }, 1500);
+        }, 800);
         event.preventDefault();
     });
 
