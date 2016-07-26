@@ -11,10 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var app_brother_component_1 = require('./app.brother_component');
 var app_navbar_component_1 = require('./app.navbar_component');
-var BROTHERS = [
-    { photo_file: 'img/head.jpg', name: 'Michael Traub', major: '8,18C', year: '2017' },
-    { photo_file: 'img/head.jpg', name: 'SchMichael Traub', major: '8,18C', year: '2017' }
-];
+
+var readStringFromFileAtPath = function(pathOfFileToReadFrom)
+{
+    var request = new XMLHttpRequest();
+    request.open("GET", pathOfFileToReadFrom, false);
+    request.send(null);
+    var returnValue = request.responseText;
+
+    return returnValue;
+}
+
+var bros_json = readStringFromFileAtPath("brothers.json");
+
+var BROTHERS = JSON.parse(bros_json)
+
+for (var i = BROTHERS.length - 1; i >= 0; i--) {
+    BROTHERS[i]['picture'] = "img/brothers/" + BROTHERS[i]['picture']
+}
+
 var AppComponent = (function () {
     function AppComponent() {
         this.brothers = BROTHERS;

@@ -15,6 +15,42 @@ $(function() {
     "use strict";
 
     /* ================================================
+       On Scroll Menu that Only goes over House section
+       ================================================ */
+
+    function getOffset( id ) {
+        var el = document.getElementById(id);
+        var _x = 0;
+        var _y = 0;
+        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+            _x += el.offsetLeft - el.scrollLeft;
+            _y += el.offsetTop - el.scrollTop;
+            el = el.offsetParent;
+        }
+        return { top: _y, left: _x };
+    }
+
+    $(document).ready(function() {
+       var windowH = $(window).height();
+       console.log(document.getElementById("house"));
+       var transitionLoc = 4000;
+       var stickToTop = 70 + $('#menu').outerHeight(true);
+       var sectionHeight = $('#house').body.offsetHeight;
+       console.log($('#house').body.offsetHeight);
+        
+        $('#menu').css({'top': transitionLoc + 'px'});
+       
+       $(window).scroll(function() {
+           var scrollVal = $(this).scrollTop();
+            if ( scrollVal > transitionLoc  && (scrollVal < transitionLoc + sectionHeight)) {
+                $('#menu').css({'position':'fixed','top' : stickToTop+'px'});
+            } else {
+                $('#menu').css({'position':'absolute','top': transitionLoc +'px'});
+            }
+        });
+     });
+
+    /* ================================================
        On Scroll Menu
        ================================================ */
 

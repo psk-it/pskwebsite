@@ -51,7 +51,13 @@ a {
     -ms-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
+    text-decoration: none;
 }
+
+#wrapper { position:relative; float:center; }
+#menu{background-color:#000; height:20px; color:#fff; padding:2px; width:1000px; float:left; position:relative; 
+float:left;}
+
 /* 
    Typography
    ---------- */
@@ -1108,11 +1114,14 @@ p,
 .section-title {
     text-align: center;
     margin: 70px 0 40px;
+    /*padding-top: 40px;*/
 }
 
 .rush .section-title {
     text-align: center;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+    padding-top: 40px;
+
 }
 
 .section-title.top-space-sm {
@@ -1130,7 +1139,9 @@ p,
 .brother-info {
     display: inline-block;
     text-align: center;
+    vertical-align: text-top;
     width: 200px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
@@ -1718,7 +1729,8 @@ p,
    ================================================ */
 
 .faq {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    background: #F4F4F4;
 }
 
 .faq-title {
