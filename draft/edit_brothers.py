@@ -37,39 +37,46 @@ def parse_value(col, value):
 		value = value.lower() in ['y', 'yes', 'true']
 	return value
 
+def search_select(names):
+	inp = "***"
+	while inp != "":
+		for n in names:
+			print "\t", n
+		names_lower = names.apply(lambda x: x.lower()).values
+		inp = raw_input("Select a brother: ").lower()
+		where_still = pd.Series(names_lower).apply(lambda n: inp in n)
+		n_left = where_still.sum()
+		print n_left
+		if n_left == 0:
+			print "No options contain '%s'." % inp
+		elif n_left >= 1:
+			if n_left == 1:
+				print names
+				print where_still
+				name = names[where_still.values].iloc[0]
+				break
+			else:
+				names = names[where_still.values].copy()
+				print names
+				print "%s options left:" % n_left
+	if inp == "":
+		return inp
+	else:
+		return name
+
 def edit_bro():
 	data = load()
 	include_former_bros = raw_input("Include former bros? ").lower() in ['y', 'yes', 'true']
 	if include_former_bros:
 		names = data['name']
 	else:
-		names = data['name'][data['in school']]
+		names = data[data['in school'].astype(bool)]['name']
 	print "Availible Bros:"
 	if len(names) > 0:
-		inp = "***"
-		while inp != "":
-			for n in names:
-				print "\t", n
-			names_lower = names.apply(lambda x: x.lower()).values
-			inp = raw_input("Select a brother: ").lower()
-			where_still = pd.Series(names_lower).apply(lambda n: inp in n)
-			n_left = where_still.sum()
-			print n_left
-			if n_left == 0:
-				print "No options contain '%s'." % inp
-			elif n_left >= 1:
-				if n_left == 1:
-					print names
-					print where_still
-					name = names[where_still.values].iloc[0]
-					break
-				else:
-					names = names[where_still.values].copy()
-					print names
-					print "%s options left:" % n_left
-	
-		print name			
+		inp = search_select(names)
+		print inp
 		if inp != "":
+			name = inp
 			where_bro = data['name'] == name
 			if inp != "":
 				inp = "***"
@@ -94,26 +101,19 @@ def edit_bro():
 
 def delete_bro():
 	data = load()
-	names = list(data['name'])
-	print names
-	print "Availible Bros:"
-	for n in names:
-		print "\t", n
-	print names, data.index
-	# names_lower = pd.Series(data=[n.lower() for n in names], index=data.index)
-	inp = "***"
-	while not(inp == "" or inp in names_lower):
-		inp = raw_input("Select a brother").lower()
-	bro = data[names_lower == inp]
+	inp = search_select(data['name'])
+	print inp
+	bro = data[data['name'] == inp]
 
-	print "\nSelected Brother:\n", bro.replace("\n", "\t\n")
+	if inp != "":
+		print "\nSelected Brother:\n", bro.replace("\n", "\t\n")
 
-	sure = raw_input("Are you sure you want to delete?").lower()
-	if sure in ['y', 'yes', 'true']:
-		data = data[names_lower != inp]
-		save(data)
-	else:
-		print "Delete aborted."
+		sure = raw_input("Are you sure you want to delete?").lower()
+		if sure in ['y', 'yes', 'true']:
+			data = data[data['name'] != inp]
+			save(data)
+		else:
+			print "Delete aborted."
 
 def view_bros():
 	print load()

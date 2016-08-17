@@ -24,15 +24,32 @@ var readStringFromFileAtPath = function(pathOfFileToReadFrom)
 
 var bros_json = readStringFromFileAtPath("brothers.json");
 
-var BROTHERS = JSON.parse(bros_json)
+var BROTHERS = JSON.parse(bros_json);
 
-for (var i = BROTHERS.length - 1; i >= 0; i--) {
-    BROTHERS[i]['picture'] = "img/brothers/" + BROTHERS[i]['picture']
+
+var SENIORS = [];
+var JUNIORS = [];
+var SOPHOMORES = [];
+for (var i =  0; i < BROTHERS.length; i++) {
+    BROTHERS[i]['picture'] = "img/brothers/" + BROTHERS[i]['picture'];
+    if (BROTHERS[i]['class'] == 'Senior')
+        SENIORS.push(BROTHERS[i]);
+    if (BROTHERS[i]['class'] == 'Junior')
+        JUNIORS.push(BROTHERS[i]);
+    if (BROTHERS[i]['class'] == 'Sophomore')
+        SOPHOMORES.push(BROTHERS[i]);
 }
+
+
+// var JUNIORS = [for (bro of BROTHERS) bro if (bro['class'] == 'Junior')];
+// var SOPHOMORES = [for (bro of BROTHERS) bro if (bro['class'] == 'Sophomore')];
 
 var AppComponent = (function () {
     function AppComponent() {
         this.brothers = BROTHERS;
+        this.seniors = SENIORS;
+        this.juniors = JUNIORS;
+        this.sophomores = SOPHOMORES;
         console.log("app-body component ctor");
     }
     AppComponent = __decorate([

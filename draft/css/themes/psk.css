@@ -51,7 +51,7 @@ body,
 
 
 
-.rush h1,  .rush h3, .rush h4{
+.rush h1, .rush h2, .rush h3, .rush h4{
     color: #FFF;
 }
 
@@ -70,6 +70,10 @@ body,
 
 .brothers h1, .brothers h2, .brothers h3, .brothers h4{
     color: #444349;
+}
+
+.brothers .panel{
+  background: #F4F4F4;
 }
 /*
 .faq h1, .faq h2, .faq h3, .faq h4, h5, h6{
@@ -90,6 +94,13 @@ body,
 }
 
 
+
+.valign {
+    display: flex;
+    align-items: center;
+}
+
+
 .main-event {
   color:#5c5c5c;
   background-color: #F4F4F4;
@@ -98,15 +109,43 @@ body,
   margin-right: -7px;
   margin-left: -7px;
   margin-top: -7px;
+  padding-bottom: 28px;
 }
 
 .main-event h2{
   color: #5c5c5c;
 }
 
+.timeline-content .main-event .date {
+    color: #5c5c5c;
+    line-height: 0.9;
+}
+
 .timeline-content .date {
     color: #F4F4F4;
     line-height: 0.9;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .main-event {
+        color:#5c5c5c;
+        background-color: #F4F4F4;
+        border-radius: 3px;
+        padding: 7px;
+        margin-right: -7px;
+        margin-left: -7px;
+        margin-top: -7px;
+    }
+
+    .main-event h2{
+        color: #5c5c5c;
+    }
+
+    .timeline-content .main-event .date {
+        color: #F4F4F4;
+        line-height: 0.9;
+    }
 }
 
 .nav-pills>li>a {
