@@ -11,26 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var app_brother_component_1 = require('./app.brother_component');
 var app_navbar_component_1 = require('./app.navbar_component');
-
-var readStringFromFileAtPath = function(pathOfFileToReadFrom)
-{
+var readStringFromFileAtPath = function (pathOfFileToReadFrom) {
     var request = new XMLHttpRequest();
     request.open("GET", pathOfFileToReadFrom, false);
     request.send(null);
     var returnValue = request.responseText;
-
     return returnValue;
-}
-
+};
 var bros_json = readStringFromFileAtPath("brothers.json");
-
 var BROTHERS = JSON.parse(bros_json);
-
-
 var SENIORS = [];
 var JUNIORS = [];
 var SOPHOMORES = [];
-for (var i =  0; i < BROTHERS.length; i++) {
+for (var i = 0; i < BROTHERS.length; i++) {
     BROTHERS[i]['picture'] = "img/brothers/" + BROTHERS[i]['picture'];
     if (BROTHERS[i]['class'] == 'Senior')
         SENIORS.push(BROTHERS[i]);
@@ -39,11 +32,6 @@ for (var i =  0; i < BROTHERS.length; i++) {
     if (BROTHERS[i]['class'] == 'Sophomore')
         SOPHOMORES.push(BROTHERS[i]);
 }
-
-
-// var JUNIORS = [for (bro of BROTHERS) bro if (bro['class'] == 'Junior')];
-// var SOPHOMORES = [for (bro of BROTHERS) bro if (bro['class'] == 'Sophomore')];
-
 var AppComponent = (function () {
     function AppComponent() {
         this.brothers = BROTHERS;
