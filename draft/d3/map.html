@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {
+  stroke-linejoin: round;
+}
+
+.land {
+  fill: #ddd;
+}
+
+
+.states {
+  fill: none;
+  stroke: #fff;
+}
+
+.point {
+  /*fill: #000;*/
+}
+
+.point:hover {
+  /*fill: #C00;*/
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 4px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+
+var point_radius = 8;
+var hover_radius = 20;
+
+var projection = d3.geo.albers();
+
+var path = d3.geo.path()
+    .projection(projection)
+    .pointRadius(1.5);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 50);
+
+var pattern = svg.append('pattern')
+      .attr('id', 'face')
+      // .attr('patternUnits', 'userSpaceOnUse')
+      .attr('width', hover_radius)
+      .attr('height', hover_radius)
+    .append("image")
+      .attr("xlink:href", "../img/brothers/rorybeyer.jpg")
+      .attr('width', hover_radius * 2)
+      .attr('height', hover_radius * 2);
+
+    
+
+queue()
+    .defer(d3.json, "http://localhost:3000/d3/us.json")
+    .defer(d3.json, "http://localhost:3000/d3/airports.json")
+    .defer(d3.json, "http://localhost:3000/brothers.json")
+    .await(ready);
+
+function ready(error, us, airports, brothers) {
+  if (error) throw error;
+
+  svg.append("path")
+      .datum(topojson.feature(us, us.objects.land))
+      .attr("class", "land")
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("class", "states")
+      .attr("d", path);
+
+  console.log(brothers);
+
+  svg.selectAll("circles.points")
+      .data(brothers)
+      .enter()
+      .append("circle")
+      .filter( function(d) {return d.coords != null})
+      .attr("class", "point")
+      .attr("r",point_radius)
+      .attr("transform", function(d) {
+        if (d.coords == null)
+          return null
+        else {
+          var proj = projection([d.coords[1],d.coords[0]]);
+          console.log(proj, d.name);
+          return "translate(" + proj + ")";
+        }
+      })
+
+      // .append("title").text(function(d) { return d.name;})
+      .on("mouseover", function(d) {
+        pattern.attr("xlink:href", "../img/brothers/" + d.picture);
+        d3.select(this)
+          .attr("r",hover_radius)
+          .attr("fill", "url(#face)");
+        div.html(d.name + "<br/>" + d.hometown)
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY + hover_radius/2 + point_radius) + "px")
+          .style("opacity", 90);
+      })
+      .on("mouseleave", function(d) {
+        d3.select(this)
+          .attr("fill", "#000")
+          .attr("r",point_radius);
+        div.transition()
+          .style("opacity", 0);
+      });
+  }
+
+
+
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+text {
+  font: 10px sans-serif;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var diameter = 960,
+    format = d3.format(",d"),
+    color = d3.scale.category20c();
+
+var bubble = d3.layout.pack()
+    .sort(null)
+    .size([diameter, diameter])
+    .padding(1.5);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+
+var col = 'hometown_short';
+
+function get_parent_substring(s) {s.substring(0, s.lastIndexOf(".")); };
+function get_child_substring(s) {s.substring(s.lastIndexOf(".")+1); };
+function has_parent(s) {s.lastIndexOf(".") >= 0; };
+
+d3.json("http://localhost:3000/brothers.json", function(error, data) {
+  if (error) throw error;
+  console.log(makehierarchy(data));
+  console.log(bubble.nodes(classes(makehierarchy(data))));
+  var node = svg.selectAll(".node")
+      .data(bubble.nodes(classes(makehierarchy(data)))
+      .filter(function(d) { return !d.children; }))
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+  node.append("title")
+      .text(function(d) { return d.className + ": " + format(d.value); });
+
+  node.append("circle")
+      .attr("r", function(d) { return d.r; })
+      .style("fill", function(d) { return color(d.packageName); });
+
+  node.append("text")
+      .attr("dy", ".3em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.className.substring(0, d.r / 3); });
+});
+
+
+function makehierarchy(data) {
+  var tree = {'id':null, "children" : [], 'childrenIds' : [],'data' :[], 'size' : 0}, dir;
+  data.forEach(function(d) {
+    dir = tree;
+    dir.data.push(d);
+    dir.size += 1;
+    console.log(d,col, d[col]);
+    try {
+      d[col].split(".").forEach(function(v) {
+        if (dir.childrenIds.indexOf(v) < 0){
+          dir.childrenIds.push(v);
+          dir.children.push({'parentId': dir.id, 'id': v, "children" : [], 'childrenIds' : [], 'data' :[], 'size' : 0});
+        }
+        dir = dir.children[dir.childrenIds.indexOf(v)];
+        dir.data.push(d);
+        dir.size += 1;
+      });
+    } catch (err) {};
+  })
+  return tree;
+}
+
+// Returns a flattened hierarchy containing all leaf nodes under the root.
+function classes(data) {
+  var classes = [];
+  // console.log(data)
+  function recurse(name, node) {
+    if (node.id != ""){
+      if (node.children.length > 0) node.children.forEach(function(child) { recurse(node.id, child); });
+      else classes.push({packageName: name, className: node.id, value: node.size});
+    }
+  }
+
+  recurse(null, data);
+  return {children: classes};
+}
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
+</script>
+        
+</body>
