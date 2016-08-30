@@ -1,0 +1,40 @@
+Atheltics:
+
+There will always be a Phi Sig around to spot you at the gym. Two-thirds of the brothers at Phi Sig particiuated in at least one season of varsity sports. You'll find a ton of athletes throughout the house currently representing the following varsity sports: hockey, lacrosse, crew, soccer, wrestling, ski, squash, sailing, gymnastics, swimming, and tennis. One sport not enough? We understand, many of our brothers are two-sport athletes. Less official but not less intense: intramural sports. This year, Phi Sig has fielded teams in twelve different IM sports -- from water polo, unihoc, and volleyball to football, basketball and soccer. Beyond MIT's team sports, our shiny new weight room is ready to accomodate even the most diesel brother at Phi Sig (Danny Eads 08', 242lbs national high school power-lifting champion)- with  large number of phi Sigs also participating in recreational bodybuilding. Moreover, Phi Sig is located minutes away from Boston's nicest running trails, following the Charles Rivor for miles -- you might find one of the five brothers currently training for the Boston Marathon. 
+
+
+Athletics (NEW):
+
+There will always be a Phi Sig around to spot you at the gym. ??? of the brothers at Phi Sig particiuated in at least one season of varsity sports, and most of us stay active on club teams, playing IM sports with other Phi Sigs, or even just tossing a frisbee around in the park front of our house. 
+
+You'll find a ton of athletes throughout the house currently representing the soccer, lacrosse, track, crew, fencing, frisbee, and hockey teams, to name a few. Phi Sig also fields teams in a bunch of IM sports like flag football, ice hockey, indoor and outdoor soccer, dodgeball, and water polo. IM sports are a great way to bond with your brothers (and to enjoy the thrill of winning).
+
+Just looking to get in shape? We have a fully-loaded weight room for getting a quick lift in before dinner, and Phi Sig is located just minutes away from Boston's best running trails along the Charles River or through the Fens. 
+
+
+sudo ifconfig eth0 down
+sudo ifconfig eth0 18.102.217.14 netmask 255.255.255.0 up
+sudo route add default gw 18.102.217.1
+
+
+
+Academics:
+
+Academic excellence brought all of us to MIT, and despite the unmatech challenege of an MIT education, the brothers of Phi Sigma Kappa continue to achieve intellectually. Beyond our social and athletic passions, brothers ay Phi Sig study hard and earn high parks. During the fall 2007 semester, Phi Sig's average GPA ranked 4th out of the 27 fraternies, with a house average of 4.38. Among our myraid of scholars, we have three academic all-conference athletes and one academic all-American. Eighteen majors (of the availible twenty-one) are represented, ranging from economics to materials ceicne to pure mathematics. Moreover, the brothers of Phi Sig recognizae the excelling academically means much more than a textbook education and take advantage of the countless opportunites offered at MIT. From participating in campus-wide robotics competitions during IAP to interning in the world's most prestigious corporations (from Goldman Sachs to Google), brothers make the most of the experience that is MIT. 
+
+Academics (NEW):
+
+Academic excellence brought all of us to MIT, and while our classes can be very challenging, the brothers of Phi Sigma Kappa continue to achieve intellectually. The brothers of Phi Sig study hard and earn high marks. For the past several years we have been on the IFC Honor Roll, ranking in the top 6 out of the 25 fraternities at MIT. 
+
+Phi Sigs bring their ideas and talents into industry and research. Our brothers have interned at and accepted full time offers from renown companies like Apple, Facebook, Microsoft, SpaceX, Tesla, Northrop Grumman, NASA, Goldman Sachs, Bridgewater, and D.E. Shaw to name a few. Many brother have continued onto persue graduate studies at esteemed programs like Standford, Harvard, CalTech and MIT.
+
+
+
+We have diverse interests and 
+
+During the fall 2007 semester, Phi Sig's average GPA ranked 4th out of the 27 fraternies, with a house average of 4.38. Among our myraid of scholars, we have three academic all-conference athletes and one academic all-American. Eighteen majors (of the availible twenty-one) are represented, ranging from economics to materials ceicne to pure mathematics. Moreover, the brothers of Phi Sig recognizae the excelling academically means much more than a textbook education and take advantage of the countless opportunites offered at MIT. From participating in campus-wide robotics competitions during IAP to interning in the world's most prestigious corporations (from Goldman Sachs to Google), brothers make the most of the experience that is MIT. 
+
+
+Social:
+
+You gotta live it up in college, and Phi Sig kills the MIT stereotype with a mix of large and exclusive parties attracting college students from Boston University, Boston College, Northeaster, and Wellesley, among others. We transform our historic chapter room into a bacl light lit dance floor complete with eight foot dance cages for bigger parties such as Graffiti and Fire and Ice. For Mardi Gras we import King Cake and thousands of beads to set the scene for the closest thing to Bourbon Street you'll find in Boston. Keeping with the local tradition, Phi Sig hosts an annual Marathon Day celebration co-sponsored by MIT sororities and several other fraternities as we grill all day in front of our house located at the final mile-marker of the race. WBCN broadcasts amidst sponsors, including Red Bull, distributing free stuff. We also feature more low key gatherings such as Around the World where the annex becomes a world tour of various cultures and their respective "refreshments." Our roof deck makes for a great place to hangout, as we chill in the cool Boston evenings laying out upon the city skyline. 
