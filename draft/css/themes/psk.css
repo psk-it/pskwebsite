@@ -201,6 +201,13 @@ a:hover,
 a:focus {
   color: #CC333F;
 }
+
+
+.panel-collapse a:hover {
+  color: #fff;
+}
+
+
 .speaker-info p,
 .highlighted-plan .price,
 .highlighted-plan .plan-name {

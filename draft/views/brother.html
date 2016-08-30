@@ -1,7 +1,19 @@
-<div class="brother-info">
-	<a style="text-decoration: none;">
-	<img src="{{brother.picture}}" class="img-responsive center-block">
-	<p>{{brother.name}}</p>
-    <span><b>{{brother.year}} </b><br> {{brother.major}} <br> {{brother.hometown}}</span>
-    </a>
-</div>
+<!-- {{brother.name}} BLOCK-->
+<a class="brother-block" style="text-decoration: none;">
+	<div class="brother-info">
+		<img src="{{brother.picture}}" class="img-responsive center-block">
+		<p style='padding-bottom: 5px;'>{{brother.name}}</p>
+		<div class="brother-content">
+		    <span class="brother-content-default">
+		    	<div style="text-align: center;margin-left: 10%;margin-right: 10%;">
+		    		<b>{{brother.hometown}}</b><br/>{{brother.major}}
+		    	</div>
+		    </span>
+		    <span class="brother-content-rollover">
+		    	<div style="text-align: center;margin-left: 10%;margin-right: 10%;">
+		    		{{brother.blurb}}
+		    	</div>
+		    </span>
+		</div>
+	</div>
+</a>

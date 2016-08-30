@@ -51,7 +51,7 @@ def save(data):
 def add_bro():
 	data = load()
 	cols = ['name', 'year', 'major', 'hometown','pledge no',
-			'picture', 'year matches graduation']
+			'picture', 'year matches graduation', 'blurb', 'sports', 'internships', 'courses', 'clubs']
 	new_bro = dict()
 	for c in cols:
 		inp = raw_input(c.capitalize() + ": ")
