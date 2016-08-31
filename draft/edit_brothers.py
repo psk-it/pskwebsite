@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import datetime
+import time
 
 
 from urllib2 import Request, urlopen, URLError
@@ -84,17 +85,20 @@ def validate_locations(data):
 	lon_lats = []
 	long_names = []
 	short_names = []
-	for town in data['hometown']:
+	for index in data.index:
+		town = data['hometown'][index]
+		lon_lat = data['coords'][index]
+		long_name = data['hometown_long'][index]
+		short_name = data['hometown_short'][index]
 		try:
 			lon_lat, long_name, short_name, full = query_location(town)
+			success = True
 		except:
 			print "Hometown %s was unsuccessfully queried" % town
-			lon_lat = None
-			long_name = ""
-			short_name = ""
 		lon_lats += [lon_lat]
 		long_names += [long_name]
 		short_names += [short_name]
+
 	data['coords'] = lon_lats
 	data['hometown_long'] = long_names
 	data['hometown_short'] = short_names
