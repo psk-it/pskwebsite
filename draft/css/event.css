@@ -1296,13 +1296,19 @@ display:none;
    Schedule
    ================================================ */
 
+.nav-pills{
+    text-align: center;
+}
+
+
+
 .nav-pills> li > a {
     background-color: #eee;
-    padding: 5px 20px;
-    font-size: 14px;
+    padding: 5px 10px;
+    font-size: 2.5vw;
     font-weight: 600;
     text-transform: uppercase;
-    ;
+    border-radius: 5px;
 }
 
 .nav-pills> li > a:hover {
@@ -1313,8 +1319,10 @@ display:none;
     margin-left: 0;
 }
 
+
+
 .nav-pills > li:not(:first-child):not(:last-child) a {
-    border-radius: 0;
+border-radius: 0;
 }
 
 .nav-pills > li:first-child > a {
@@ -1325,6 +1333,19 @@ display:none;
 .nav-pills > li:last-child > a {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .nav-pills> li > a {
+        background-color: #eee;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
 }
 /* 
    Vertical Timeline
