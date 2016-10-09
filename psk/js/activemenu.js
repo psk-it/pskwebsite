@@ -10,6 +10,8 @@ var lastId,
       if (item.length) { return item; }
     });
 
+console.log(scrollItems);
+
 
 // Bind to scroll
 $(window).scroll(function(){

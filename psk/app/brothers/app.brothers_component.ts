@@ -35,7 +35,7 @@ console.log(FRESHMEN);
 
 @Component({
   selector: 'brothers',
-  templateUrl: 'views/brothers.html'
+  templateUrl: 'views/brothers.html',
   directives: [BrotherComponent]
 })
 export class BrothersComponent {

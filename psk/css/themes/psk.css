@@ -160,6 +160,12 @@ body,
     color: #818181;
 }
 
+.navbar-default .navbar-nav>li:hover>a {
+    color: #444349;
+    background-color: #C2C2C2;
+    border-radius: 3px;
+}
+
 .slick-prev:before,
 .slick-next:before {
     color: #C2C2C2;
