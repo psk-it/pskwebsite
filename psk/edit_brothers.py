@@ -4,9 +4,45 @@ import pandas as pd
 import datetime
 import time
 
-
-
 from urllib2 import Request, urlopen, URLError
+
+def help_info():
+	message = (
+		"""
+		Hello IT Chair! Run "python edit_brothers.py "to use this 
+		program. From there, here are some of the less intuitive 
+		points:
+
+		1. Year matches graduation can be used to keep a brother
+		   on an extra year. Most of the time, this will be true, 
+		   but if you have a sophomore rush or 5th year senior, 
+		   this option gives you flexibility. 
+
+		2. Sports, internships, courses, clubs. These columns exist
+		   for possible future projects where you might want to use
+		   D3 or some other javascript package to make interactive
+		   stuff. Might not be a good idea. Either way, entering the
+		   input like "[Goldman Sachs], [Tesla]" will be parsed into
+		   a list "['Goldman Sachs', 'Tesla']"
+
+		3. "Hometown ??? was unsuccessfully queried." This program
+		   automatically queries Google for long-lat coords and 
+		   other info about people's hometowns to put into a map
+		   visualization. If you get this, it means either Google
+		   could not find that hometown, or you have made too many
+		   requests. 
+
+		4. All past brother info is saved, and every June running 
+		   the "update years" command re-saves the data, and moves
+		   Juniors to Seniors, Soph to Jr and so on. 
+
+		5. To do anything beyond the command line interface is not
+		   hard, you just have to manipulate the underlying Pandas
+		   dataframe. For example, if you want a new column, you
+		   just add it to the dataframe, and add that column into
+		   the logic of the add_bro() and parse_value() functions. 
+		""" )
+	print(message)
 
 def query_location(where):
 	formatted = "+".join(where.split(" "))
@@ -204,7 +240,7 @@ def view_bros():
 def get_class_mapping():
 	now = datetime.datetime.now()
 	seniors = now.year
-	if now.month >= 8:
+	if now.month >= 6:
 		seniors += 1
 	return {
 		seniors : 'Senior',
@@ -230,6 +266,8 @@ def main():
 		print("2. Edit brother")
 		print("3. Delete brother")
 		print("4. View data")
+		print("5. Update years")
+		print("6. Help")
 		print("Q. Quit")
 		inp = raw_input("Select option (Q to quit): ").lower()
 		if inp == "1":
@@ -240,6 +278,10 @@ def main():
 			delete_bro()
 		elif inp == "4":
 			view_bros()
+		elif inp == "5":
+			save(load()) # the updating happens in the save function
+		elif inp == "6":
+			help_info()
 
 	print("Goodbye!")
 
