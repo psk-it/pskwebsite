@@ -196,6 +196,7 @@ def edit_bro():
 						try_again = True
 						while try_again:
 							try_again = False
+							print ("Old value: %s" % data[where_bro][inp].iloc[0])
 							val = raw_input("New value: ")
 							if val != "":
 								try:
