@@ -13,7 +13,7 @@ def help_info():
 		program. From there, here are some of the less intuitive 
 		points:
 
-		1. The year matches graduation can be used to keep a brother
+		1. Year matches graduation can be used to keep a brother
 		   on an extra year. Most of the time, this will be true, 
 		   but if you have a sophomore rush or 5th year senior, 
 		   this option gives you flexibility. 
