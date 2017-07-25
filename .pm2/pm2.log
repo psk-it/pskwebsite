@@ -1,0 +1,40 @@
+2017-07-14 23:17:03: ===============================================================================
+2017-07-14 23:17:03: --- New PM2 Daemon started ----------------------------------------------------
+2017-07-14 23:17:03: Time                 : Fri Jul 14 2017 23:17:03 GMT+0000 (UTC)
+2017-07-14 23:17:03: PM2 version          : 2.5.0
+2017-07-14 23:17:03: Node.js version      : 6.10.3
+2017-07-14 23:17:03: Current arch         : x64
+2017-07-14 23:17:03: PM2 home             : /home/ubuntu/.pm2
+2017-07-14 23:17:03: PM2 PID file         : /home/ubuntu/.pm2/pm2.pid
+2017-07-14 23:17:03: RPC socket file      : /home/ubuntu/.pm2/rpc.sock
+2017-07-14 23:17:03: BUS socket file      : /home/ubuntu/.pm2/pub.sock
+2017-07-14 23:17:03: Application log path : /home/ubuntu/.pm2/logs
+2017-07-14 23:17:03: Process dump file    : /home/ubuntu/.pm2/dump.pm2
+2017-07-14 23:17:03: Concurrent actions   : 2
+2017-07-14 23:17:03: SIGTERM timeout      : 1600
+2017-07-14 23:17:03: ===============================================================================
+2017-07-14 23:17:03: Starting execution sequence in -fork mode- for app name:server id:0
+2017-07-14 23:17:03: App name:server id:0 online
+2017-07-15 23:47:24: pm2 has been killed by signal, dumping process list before exit...
+2017-07-15 23:47:24: Deleting process 0
+2017-07-15 23:47:24: Stopping app:server id:0
+2017-07-15 23:47:24: App [server] with id [0] and pid [27406], exited with code [0] via signal [SIGTERM]
+2017-07-15 23:47:24: pid=27406 msg=process killed
+2017-07-15 23:47:24: [PM2] Exited peacefully
+2017-07-15 23:53:35: ===============================================================================
+2017-07-15 23:53:35: --- New PM2 Daemon started ----------------------------------------------------
+2017-07-15 23:53:35: Time                 : Sat Jul 15 2017 23:53:35 GMT+0000 (UTC)
+2017-07-15 23:53:35: PM2 version          : 2.5.0
+2017-07-15 23:53:35: Node.js version      : 6.10.3
+2017-07-15 23:53:35: Current arch         : x64
+2017-07-15 23:53:35: PM2 home             : /home/ubuntu/.pm2
+2017-07-15 23:53:35: PM2 PID file         : /home/ubuntu/.pm2/pm2.pid
+2017-07-15 23:53:35: RPC socket file      : /home/ubuntu/.pm2/rpc.sock
+2017-07-15 23:53:35: BUS socket file      : /home/ubuntu/.pm2/pub.sock
+2017-07-15 23:53:35: Application log path : /home/ubuntu/.pm2/logs
+2017-07-15 23:53:35: Process dump file    : /home/ubuntu/.pm2/dump.pm2
+2017-07-15 23:53:35: Concurrent actions   : 2
+2017-07-15 23:53:35: SIGTERM timeout      : 1600
+2017-07-15 23:53:35: ===============================================================================
+2017-07-15 23:53:35: Starting execution sequence in -fork mode- for app name:server id:0
+2017-07-15 23:53:35: App name:server id:0 online
