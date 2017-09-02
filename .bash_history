@@ -221,3 +221,123 @@ usermod -aG sudo isaac
 sudo usermod -aG sudo isaac
 sudo emacs /etc/ssh/sshd_config
 sudo /etc/init.d/ssh restart
+ls
+cd psk
+git status
+git push origin master
+git pull origin master
+sudo git pull origin master
+emacs psk/data/brothers.json
+emacs data/brothers.json
+ls
+emacs edit_brothers.py
+emacs data/brothers.json
+wget -r -A jpg,jpeg -nd http://www.sample.com/images/imag
+ls
+git pull origin master
+git pul
+git pull
+git config user.email franksoucy9@gmail.com
+git pull
+git pull origin master
+git add -A
+ls
+cd ..
+ls
+git add -A
+git config core.sharedRepository
+git add -A
+sudo git pull origin master
+ls
+cd psk
+ls
+python edit_brothers.py
+sudo apt-get install pandas
+sudo apt-get install python-pip
+sudo pip install pandas
+python edit_brothers.py
+ls
+emacs data/brothers.json
+python edit_brothers.py
+emacs data/brothers.json
+python edit_brothers.py
+emacs edit_brothers.py
+python edit_brothers.py
+ls
+cd psk
+ls
+python edit_brothers.py
+git add -A
+git status
+git add data/brothers.json
+ls
+cd psk
+git pull origin master
+ls
+whoami
+git config --global user.email "franksoucy9@gmail.com"
+git pull origin master
+git config --global user.name "Frank Soucy"
+whoami
+ls
+git pull origin master
+su
+sudo git pull origin master
+ls
+cd psk
+ls
+sudo git pull origin master
+ls
+python edit_brothers.py
+sudo passwd ubuntu
+ls
+ls
+ls psk/
+python edit_brothers.py
+ls psk/edit_brothers.py
+python psk/edit_brothers.py
+exit
+cd psk
+ls
+python edit_brothers.py
+ls
+dir psk/
+cd
+cd psk/
+python edit_brothers.py
+exit
+cd psk/
+python edit_brothers.py
+ls
+npm start
+npm run lite
+python edit_brothers.py
+exit
+ls
+cd psk
+ls
+ls img
+ls data
+ls data/brothers
+ls img/brothers
+git pull origin master
+sudo git pull origin master
+python edit_brothers.py
+git pull origin master
+sudo git pull origin master
+python edit_brothers.py
+sudo git pull origin master
+python edit_brothers.py
+sudo git pull origin master
+ls
+python edit_brothers.py
+git pull origin master
+sudo git pull origin master
+python edit_brothers.py
+sudo git pull origin master
+ls
+python edit_brothers.py
+sudo git pull origin master
+ls
+cd psk
+ls
