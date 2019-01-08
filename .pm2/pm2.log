@@ -38,3 +38,9 @@
 2017-07-15 23:53:35: ===============================================================================
 2017-07-15 23:53:35: Starting execution sequence in -fork mode- for app name:server id:0
 2017-07-15 23:53:35: App name:server id:0 online
+2018-01-30 22:49:59: pm2 has been killed by signal, dumping process list before exit...
+2018-01-30 22:49:59: Deleting process 0
+2018-01-30 22:49:59: Stopping app:server id:0
+2018-01-30 22:49:59: App [server] with id [0] and pid [1524], exited with code [0] via signal [SIGTERM]
+2018-01-30 22:49:59: pid=1524 msg=process killed
+2018-01-30 22:49:59: [PM2] Exited peacefully

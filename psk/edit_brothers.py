@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import datetime
 import time
+import pdb
 
 from urllib2 import Request, urlopen, URLError
 
@@ -151,7 +152,7 @@ def search_select(names):
 			print("\t", n)
 		names_lower = names.apply(lambda x: x.lower()).values
 		inp = raw_input("Select a brother: ").lower()
-		where_still = pd.Series(names_lower).apply(lambda n: inp in n)
+		where_still = pd.Series(names_lower).apply(lambda n: inp == n)
 		n_left = where_still.sum()
 		print(n_left)
 		if n_left == 0:
