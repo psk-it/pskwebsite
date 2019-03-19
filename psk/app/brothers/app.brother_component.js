@@ -8,29 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var Brother = (function () {
-    function Brother() {
-    }
-    return Brother;
-}());
+const core_1 = require('@angular/core');
+class Brother {
+}
 exports.Brother = Brother;
-var BrotherComponent = (function () {
-    function BrotherComponent() {
+let BrotherComponent = class BrotherComponent {
+    constructor() {
         console.log("brother component ctor");
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Brother)
-    ], BrotherComponent.prototype, "brother", void 0);
-    BrotherComponent = __decorate([
-        core_1.Component({
-            selector: 'brother-component',
-            templateUrl: 'views/brother.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], BrotherComponent);
-    return BrotherComponent;
-}());
+};
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', Brother)
+], BrotherComponent.prototype, "brother", void 0);
+BrotherComponent = __decorate([
+    core_1.Component({
+        selector: 'brother-component',
+        templateUrl: 'views/brother.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], BrotherComponent);
 exports.BrotherComponent = BrotherComponent;
 //# sourceMappingURL=app.brother_component.js.map

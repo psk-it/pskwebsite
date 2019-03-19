@@ -8,19 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var ContactComponent = (function () {
-    function ContactComponent() {
+const core_1 = require('@angular/core');
+let ContactComponent = class ContactComponent {
+    constructor() {
         this.pages = ["academics", "athletics", "brothers", "house", "rush", "social"];
     }
-    ContactComponent = __decorate([
-        core_1.Component({
-            selector: 'contact-us',
-            templateUrl: 'views/contact-us.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ContactComponent);
-    return ContactComponent;
-}());
+};
+ContactComponent = __decorate([
+    core_1.Component({
+        selector: 'contact-us',
+        templateUrl: 'views/contact-us.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], ContactComponent);
 exports.ContactComponent = ContactComponent;
 //# sourceMappingURL=app.contact_component.js.map

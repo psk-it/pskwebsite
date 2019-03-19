@@ -8,19 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var RushComponent = (function () {
-    function RushComponent() {
+const core_1 = require('@angular/core');
+let RushComponent = class RushComponent {
+    constructor() {
         this.pages = ["academics", "athletics", "brothers", "house", "rush", "social"];
     }
-    RushComponent = __decorate([
-        core_1.Component({
-            selector: 'rush',
-            templateUrl: 'views/rush.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], RushComponent);
-    return RushComponent;
-}());
+};
+RushComponent = __decorate([
+    core_1.Component({
+        selector: 'rush',
+        templateUrl: 'views/rush.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], RushComponent);
 exports.RushComponent = RushComponent;
 //# sourceMappingURL=app.rush_component.js.map

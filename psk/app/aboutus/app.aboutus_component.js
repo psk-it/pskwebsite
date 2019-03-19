@@ -8,19 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AboutUsComponent = (function () {
-    function AboutUsComponent() {
+const core_1 = require('@angular/core');
+let AboutUsComponent = class AboutUsComponent {
+    constructor() {
         this.pages = ["academics", "athletics", "brothers", "house", "rush", "social"];
     }
-    AboutUsComponent = __decorate([
-        core_1.Component({
-            selector: 'about-us',
-            templateUrl: 'views/about-us.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AboutUsComponent);
-    return AboutUsComponent;
-}());
+};
+AboutUsComponent = __decorate([
+    core_1.Component({
+        selector: 'about-us',
+        templateUrl: 'views/about-us.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], AboutUsComponent);
 exports.AboutUsComponent = AboutUsComponent;
 //# sourceMappingURL=app.aboutus_component.js.map

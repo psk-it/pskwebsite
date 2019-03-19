@@ -8,19 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var HouseComponent = (function () {
-    function HouseComponent() {
+const core_1 = require('@angular/core');
+let HouseComponent = class HouseComponent {
+    constructor() {
         this.pages = ["academics", "athletics", "brothers", "house", "rush", "social"];
     }
-    HouseComponent = __decorate([
-        core_1.Component({
-            selector: 'house',
-            templateUrl: 'views/house.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HouseComponent);
-    return HouseComponent;
-}());
+};
+HouseComponent = __decorate([
+    core_1.Component({
+        selector: 'house',
+        templateUrl: 'views/house.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], HouseComponent);
 exports.HouseComponent = HouseComponent;
 //# sourceMappingURL=app.house_component.js.map

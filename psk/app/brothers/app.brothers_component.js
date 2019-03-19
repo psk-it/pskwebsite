@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var app_brother_component_1 = require('./app.brother_component');
+const core_1 = require('@angular/core');
+const app_brother_component_1 = require('./app.brother_component');
 var readStringFromFileAtPath = function (pathOfFileToReadFrom) {
     var request = new XMLHttpRequest();
     request.open("GET", pathOfFileToReadFrom, false);
@@ -35,23 +35,22 @@ for (var i = 0; i < BROTHERS.length; i++) {
         FRESHMEN.push(BROTHERS[i]);
 }
 console.log(FRESHMEN);
-var BrothersComponent = (function () {
-    function BrothersComponent() {
+let BrothersComponent = class BrothersComponent {
+    constructor() {
         this.brothers = BROTHERS;
         this.seniors = SENIORS;
         this.juniors = JUNIORS;
         this.sophomores = SOPHOMORES;
         this.freshmen = FRESHMEN;
     }
-    BrothersComponent = __decorate([
-        core_1.Component({
-            selector: 'brothers',
-            templateUrl: 'views/brothers.html',
-            directives: [app_brother_component_1.BrotherComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], BrothersComponent);
-    return BrothersComponent;
-}());
+};
+BrothersComponent = __decorate([
+    core_1.Component({
+        selector: 'brothers',
+        templateUrl: 'views/brothers.html',
+        directives: [app_brother_component_1.BrotherComponent]
+    }), 
+    __metadata('design:paramtypes', [])
+], BrothersComponent);
 exports.BrothersComponent = BrothersComponent;
 //# sourceMappingURL=app.brothers_component.js.map

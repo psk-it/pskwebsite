@@ -8,18 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var CultureComponent = (function () {
-    function CultureComponent() {
-    }
-    CultureComponent = __decorate([
-        core_1.Component({
-            selector: 'culture',
-            templateUrl: 'views/culture.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CultureComponent);
-    return CultureComponent;
-}());
+const core_1 = require('@angular/core');
+let CultureComponent = class CultureComponent {
+};
+CultureComponent = __decorate([
+    core_1.Component({
+        selector: 'culture',
+        templateUrl: 'views/culture.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], CultureComponent);
 exports.CultureComponent = CultureComponent;
 //# sourceMappingURL=app.culture_component.js.map
