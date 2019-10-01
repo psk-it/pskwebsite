@@ -5,19 +5,19 @@ import datetime
 import time
 import pdb
 
-from urllib2 import Request, urlopen, URLError
+from urllib.request import Request, urlopen, URLError
 
 def help_info():
 	message = (
 		"""
-		Hello IT Chair! Run "python edit_brothers.py "to use this 
-		program. From there, here are some of the less intuitive 
+		Hello IT Chair! Run "python edit_brothers.py "to use this
+		program. From there, here are some of the less intuitive
 		points:
 
 		1. The year matches graduation can be used to keep a brother
-		   on an extra year. Most of the time, this will be true, 
-		   but if you have a sophomore rush or 5th year senior, 
-		   this option gives you flexibility. 
+		   on an extra year. Most of the time, this will be true,
+		   but if you have a sophomore rush or 5th year senior,
+		   this option gives you flexibility.
 
 		2. Sports, internships, courses, clubs. These columns exist
 		   for possible future projects where you might want to use
@@ -27,21 +27,21 @@ def help_info():
 		   a list "['Goldman Sachs', 'Tesla']"
 
 		3. "Hometown ??? was unsuccessfully queried." This program
-		   automatically queries Google for long-lat coords and 
+		   automatically queries Google for long-lat coords and
 		   other info about people's hometowns to put into a map
 		   visualization. If you get this, it means either Google
 		   could not find that hometown, or you have made too many
-		   requests. 
+		   requests.
 
-		4. All past brother info is saved, and every June running 
+		4. All past brother info is saved, and every June running
 		   the "update years" command re-saves the data, and moves
-		   Juniors to Seniors, Soph to Jr and so on. 
+		   Juniors to Seniors, Soph to Jr and so on.
 
 		5. To do anything beyond the command line interface is not
 		   hard, you just have to manipulate the underlying Pandas
 		   dataframe. For example, if you want a new column, you
 		   just add it to the dataframe, and add that column into
-		   the logic of the add_bro() and parse_value() functions. 
+		   the logic of the add_bro() and parse_value() functions.
 		""" )
 	print(message)
 
@@ -94,7 +94,7 @@ def add_bro():
 			'picture', 'year matches graduation', 'blurb', 'sports', 'internships', 'courses', 'clubs']
 	new_bro = dict()
 	for c in cols:
-		inp = raw_input(c.capitalize() + ": ")
+		inp = input(c.capitalize() + ": ")
 		inp = parse_value(c, inp)
 		new_bro[c] = inp
 	data = data.append(new_bro, ignore_index = True)
@@ -151,7 +151,7 @@ def search_select(names):
 		for n in names:
 			print("\t", n)
 		names_lower = names.apply(lambda x: x.lower()).values
-		inp = raw_input("Select a brother: ").lower()
+		inp = input("Select a brother: ").lower()
 		where_still = pd.Series(names_lower).apply(lambda n: inp == n)
 		n_left = where_still.sum()
 		print(n_left)
@@ -174,7 +174,7 @@ def search_select(names):
 
 def edit_bro():
 	data = load()
-	include_former_bros = raw_input("Include former bros? ").lower() in ['y', 'yes', 'true']
+	include_former_bros = input("Include former bros? ").lower() in ['y', 'yes', 'true']
 	if include_former_bros:
 		names = data['name']
 	else:
@@ -192,13 +192,13 @@ def edit_bro():
 					bro = data[where_bro]
 					print("\nSelected Brother:\n", bro.transpose())
 					print()
-					inp = raw_input("Select column to modify: ")
+					inp = input("Select column to modify: ")
 					if inp in bro:
 						try_again = True
 						while try_again:
 							try_again = False
 							print ("Old value: %s" % data[where_bro][inp].iloc[0])
-							val = raw_input("New value: ")
+							val = input("New value: ")
 							if val != "":
 								try:
 									index = data[where_bro].index[0]
@@ -225,7 +225,7 @@ def delete_bro():
 	if inp != "":
 		print("\nSelected Brother:\n", bro.replace("\n", "\t\n"))
 
-		sure = raw_input("Are you sure you want to delete?").lower()
+		sure = input("Are you sure you want to delete?").lower()
 		if sure in ['y', 'yes', 'true']:
 			data = data[data['name'] != inp]
 			save(data)
@@ -237,7 +237,7 @@ def delete_bro():
 def view_bros():
 	print(load())
 	print()
-	
+
 
 def get_class_mapping():
 	now = datetime.datetime.now()
@@ -271,7 +271,7 @@ def main():
 		print("5. Update years")
 		print("6. Help")
 		print("Q. Quit")
-		inp = raw_input("Select option (Q to quit): ").lower()
+		inp = input("Select option (Q to quit): ").lower()
 		if inp == "1":
 			add_bro()
 		elif inp == "2":
