@@ -1,0 +1,5 @@
+*.DS_Store
+.DS_Store
+*typings*
+*node_modules*
+*npm*
