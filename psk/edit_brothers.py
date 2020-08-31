@@ -205,11 +205,16 @@ def edit_bro():
                             try_again = False
                             print ("Old value: %s" % data[where_bro][inp].iloc[0])
                             val = input("New value: ")
+                            print("Val: ", val)
                             if val != "":
                                 try:
                                     index = data[where_bro].index[0]
-                                    data.set_value(index, inp, parse_value(inp, val))
-                                except:
+                                    print(index, inp, val)
+                                    print(parse_value(inp, val))
+                                    print("Parse works")
+                                    data.at[index, inp] = parse_value(inp, val)
+                                except Exception as e:
+                                    print(e)
                                     print("Parsing failed. Try again.")
                                     try_again = True
                             else:
