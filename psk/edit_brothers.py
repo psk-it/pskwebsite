@@ -208,8 +208,8 @@ def edit_bro():
                             if val != "":
                                 try:
                                     index = data[where_bro].index[0]
-                                    data.set_value(index, inp, parse_value(inp, val))
-                                except:
+                                    data.at[index, inp] = parse_value(inp, val)
+                                except Exception as e:
                                     print("Parsing failed. Try again.")
                                     try_again = True
                             else:
